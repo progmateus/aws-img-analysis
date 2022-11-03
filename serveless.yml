@@ -1,0 +1,21 @@
+provider:
+  name: aws
+  runtime: nodejs12.x
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+      - rekognition:DetectLabels
+      Resource: *
+    - Effect: "Allow"
+      Action:
+      - Translate:TranslateText
+      Resource: "*"
+
+
+functions:
+  img-analysis:
+    handler: handler.main
+
+    * -> TEM O RESTANTE DO ARQUIVO
+        ESSA É APENAS A PARTE ALTERADA
+     <-*
